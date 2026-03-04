@@ -1,0 +1,25 @@
+{
+	"admin/modem": {
+		"title": "Modem Management",
+		"order": 60,
+		"action": {
+			"type": "firstchild",
+			"preferred": "epm",
+			"recurse": true
+		}
+	},
+	"admin/modem/epm": {
+		"title": "eSIM Profile Manager",
+		"order": 60,
+		"action": {
+			"type": "view",
+			"path": "epm",
+			"post": {
+				"cbi.submit": true
+			}
+		},
+		"depends": {
+			"acl": [ "allow-full-uci-access" ]
+		}
+	}
+}

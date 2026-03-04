@@ -104,7 +104,7 @@ end
 function exec_lpac_command(cmd_args, timeout_seconds)
     local env = build_lpac_env()
     local timeout = timeout_seconds or 30
-    local full_cmd = env .. " timeout " .. timeout .. " /usr/lib/lpac " .. cmd_args
+    local full_cmd = env .. " timeout " .. timeout .. " /usr/bin/lpac " .. cmd_args
     
     -- Debug
     luci.sys.exec("logger -t epm 'Executing: " .. full_cmd .. "'")
